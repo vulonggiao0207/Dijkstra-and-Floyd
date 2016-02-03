@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{83491F55-3E61-478E-8D87-3B09207450FC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dijkstra</RootNamespace>
+    <AssemblyName>Dijkstra</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BangGhiDijkstra.cs" />
+    <Compile Include="BangGhiFloyd.cs" />
+    <Compile Include="Diem.cs" />
+    <Compile Include="MoTaDijkstra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MoTaDijkstra.Designer.cs">
+      <DependentUpon>MoTaDijkstra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MoTaFloyd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MoTaFloyd.Designer.cs">
+      <DependentUpon>MoTaFloyd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuaDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuaDiem.Designer.cs">
+      <DependentUpon>SuaDiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuaDuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuaDuong.Designer.cs">
+      <DependentUpon>SuaDuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VeDoThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VeDoThi.Designer.cs">
+      <DependentUpon>VeDoThi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DuongThang.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MoTaDijkstra.resx">
+      <DependentUpon>MoTaDijkstra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoTaFloyd.resx">
+      <DependentUpon>MoTaFloyd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuaDiem.resx">
+      <DependentUpon>SuaDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuaDuong.resx">
+      <DependentUpon>SuaDuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VeDoThi.resx">
+      <DependentUpon>VeDoThi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diem.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pause.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\last.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\step.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\playall.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\playall1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\playall2.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
